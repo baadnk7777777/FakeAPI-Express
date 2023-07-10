@@ -1,0 +1,83 @@
+[
+    {
+      "id": "1",
+      "license_plate": "ABC123",
+      "registration_timestamp": "2023-07-01 10:30:00",
+      "current_timestamp": "",
+      "price": 15.99,
+      "queue": 1
+    },
+    {
+      "id": "2",
+      "license_plate": "XYZ789",
+      "registration_timestamp": "2023-06-28 09:45:00",
+      "current_timestamp": "",
+      "price": 12.99,
+      "queue": 2
+    },
+    {
+      "id": "3",
+      "license_plate": "DEF456",
+      "registration_timestamp": "2023-07-03 16:00:00",
+      "current_timestamp": "",
+      "price": 9.99,
+      "queue": 3
+    },
+    {
+      "id": "4",
+      "license_plate": "GHI789",
+      "registration_timestamp": "2023-06-29 11:15:00",
+      "current_timestamp": "",
+      "price": 7.99,
+      "queue": 4
+    },
+    {
+      "id": "5",
+      "license_plate": "JKL012",
+      "registration_timestamp": "2023-07-02 13:30:00",
+      "current_timestamp": "",
+      "price": 10.99,
+      "queue": 5
+    },
+    {
+      "id": "6",
+      "license_plate": "MNO345",
+      "registration_timestamp": "2023-07-04 08:45:00",
+      "current_timestamp": "",
+      "price": 8.99,
+      "queue": 6
+    },
+    {
+      "id": "7",
+      "license_plate": "PQR678",
+      "registration_timestamp": "2023-07-06 15:00:00",
+      "current_timestamp": "",
+      "price": 14.99,
+      "queue": 7
+    },
+    {
+      "id": "8",
+      "license_plate": "STU901",
+      "registration_timestamp": "2023-07-05 10:15:00",
+      "current_timestamp": "",
+      "price": 11.99,
+      "queue": 8
+    },
+    {
+      "id": "9",
+      "license_plate": "VWX234",
+      "registration_timestamp": "2023-07-08 12:30:00",
+      "current_timestamp": "",
+      "price": 6.99,
+      "queue": 9
+    },
+    {
+      "id": "10",
+      "license_plate": "YZA567",
+      "registration_timestamp": "2023-07-07 09:00:00",
+      "current_timestamp": "",
+      "price": 13.99,
+      "queue": 10
+    }
+  ]
+  
