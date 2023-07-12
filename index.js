@@ -2,7 +2,7 @@ const express = require('express');
 const userRoutes = require('./app/routes/userRoutes');
 const { getUserById } = require('./app/controller/userController');
 const app = express();
-const port = 3000;
+const port = 4000;
 const fs = require('fs');
 const path = require('path');
 const qrcode = require('qrcode');
@@ -99,6 +99,57 @@ app.get('/car/detail/:license_plate', async (req, res) => {
         }
     });
 });
+
+app.get('/todos', async (req, res) => {
+   
+    const valetDataPath = path.join(__dirname, './app/data/todos.json'); 
+
+    fs.readFile(valetDataPath, 'utf8', (err, data) => {
+        //console.log(data)
+        if (err) {
+            console.error(err);
+            res.status(500).send('Internal server error');
+        } else {
+            const cars = JSON.parse(data);
+            // const car = cars.find(cars => cars.license_plate === license_plate);
+            // const car = cars.find(cars => cars.license_plate === license_plate);
+
+            if (cars) {
+                res.send(cars);
+            } else {
+                res.status(404).send('car not found');
+            }
+        }
+    });
+});
+
+app.post('/todos', async (req, res) => {
+    console.log(req.body);
+    const newData = {
+        name: req.body.name,
+        timeStamp: Date.now().toString()
+    };
+
+    fs.readFile('./app/data/todos.json', 'utf8', (err, fileData) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).send('Internal server error');
+        }
+      
+        let jsonData = JSON.parse(fileData); // Parse the existing JSON data
+        jsonData.push(newData);
+
+        fs.writeFile('./app/data/todos.json', JSON.stringify(jsonData, null, 2), 'utf8', (err) => {
+            if (err) {
+                console.error(err);
+                return res.status(500).send('Internal server error');
+            } else {
+                res.send(req.body);
+            }
+        });
+    });
+});
+
 
 app.listen(port, () => {
     console.log(`Server is listening on port ${port}`);
